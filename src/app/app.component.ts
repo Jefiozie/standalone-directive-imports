@@ -7,6 +7,7 @@ import {
 } from "@angular/core";
 
 import { Directive } from "@angular/core";
+import { RouterModule } from "@angular/router";
 
 @Directive({ selector: "h1[red]", standalone: true })
 export class MakeItRedDirective implements AfterViewInit {
@@ -42,10 +43,10 @@ export class DirsModule {}
   // imports: [MakeItRedDirective, MakeItBlueDirective],
 
   // this does not work
-  // imports: [dirs],
+  imports: [RouterModule, dirs],
 
   //this does also work
-  imports: [DirsModule],
+  // imports: [DirsModule],
 
   template: `
     <div>
