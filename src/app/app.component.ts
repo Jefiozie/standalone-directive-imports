@@ -42,7 +42,7 @@ export class DirsModule {}
   // imports: [MakeItRedDirective, MakeItBlueDirective],
 
   // this does not work
-  imports: dirs,
+  imports: [dirs],
 
   //this does also work
   // imports: [DirsModule],
